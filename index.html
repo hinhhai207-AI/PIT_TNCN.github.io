@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Cụ Tính Thuế Thu Nhập Cá Nhân 2026 - Chuẩn Nghị Quyết Mới</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Config for theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#16a34a',
+                            600: '#15803d',
+                            700: '#166534',
+                            800: '#14532d',
+                            DEFAULT: '#10b981'
+                        },
+                        accent: {
+                            blue: '#0284c7',
+                            orange: '#f97316'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-card {
+                border: 1px solid #e2e8f0 !important;
+                box-shadow: none !important;
+                background: white !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="bg-gradient-to-r from-emerald-800 to-green-700 text-white shadow-md sticky top-0 z-50 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white p-2 rounded-lg text-emerald-800 shadow-md">
+                    <i class="fa-solid fa-calculator text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg sm:text-xl tracking-tight leading-none flex items-center gap-2">
+                        PIT-2026 <span class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Đa Chu Kỳ</span>
+                    </h1>
+                    <p class="text-xs text-emerald-100 hidden sm:block">Tính thuế Tháng / Quý / Năm chuẩn xác theo Nghị quyết 110/2025/UBTVQH15</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-xs bg-emerald-900/40 text-emerald-200 border border-emerald-500/30 px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                    Cập nhật năm 2026.3
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Intro -->
+    <div class="bg-gradient-to-b from-emerald-800 to-emerald-950 text-white py-10 px-4 text-center relative overflow-hidden no-print">
+        <!-- Abstract background blobs -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-emerald-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-green-500/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">Công Cụ Tiện Ích Doanh Nghiệp & NLĐ</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">Tính Thuế TNCN 2026</h2>
+            <p class="text-emerald-100 max-w-2xl mx-auto text-xs sm:text-sm leading-relaxed">
+                Tự động tối ưu hóa và phân tích nghĩa vụ thuế theo <b>Tháng, Quý, Năm </b>. Áp dụng mức giảm trừ mới cùng biểu thuế lũy tiến tinh gọn.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left Side: Calculation Form (5 cols on desktop) -->
+            <div class="lg:col-span-5 space-y-6 no-print">
+                <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-8 transition-all hover:shadow-2xl">
+                    
+                    <!-- Tab Selector for Period (Month/Quarter/Year) -->
+                    <div class="mb-6">
+                        <label class="block text-xs font-bold uppercase text-slate-400 tracking-wider mb-2">Chu kỳ tính toán</label>
+                        <div class="grid grid-cols-3 gap-1.5 p-1 bg-slate-100 rounded-xl">
+                            <button type="button" id="tabMonth" onclick="setPeriodMode('month')" class="py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 bg-white text-emerald-800 shadow-sm">
+                                <i class="fa-solid fa-calendar-day"></i> Tháng
+                            </button>
+                            <button type="button" id="tabQuarter" onclick="setPeriodMode('quarter')" class="py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-800">
+                                <i class="fa-solid fa-calendar-minus"></i> Quý
+                            </button>
+                            <button type="button" id="tabYear" onclick="setPeriodMode('year')" class="py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-800">
+                                <i class="fa-solid fa-calendar-days"></i> Năm
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+                        <h3 class="font-bold text-base text-slate-800 flex items-center gap-2">
+                            <i class="fa-solid fa-sliders text-emerald-600"></i> Nhập Thông Tin Lương
+                        </h3>
+                        <button onclick="resetForm()" class="text-xs text-slate-400 hover:text-emerald-600 flex items-center gap-1 transition-colors">
+                            <i class="fa-solid fa-rotate-left"></i> Đặt lại
+                        </button>
+                    </div>
+
+                    <!-- Input Form -->
+                    <div class="space-y-4">
+                        <!-- Calc Mode (Gross to Net vs Net to Gross) -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 mb-1.5">Hình thức tính lương</label>
+                            <div class="grid grid-cols-2 gap-3 p-1 bg-slate-100 rounded-xl">
+                                <button type="button" id="btnGrossToNet" onclick="setCalcMode('gross')" class="py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 bg-white text-emerald-800 shadow-sm">
+                                    <i class="fa-solid fa-arrow-down-long"></i> GROSS &rarr; NET
+                                </button>
+                                <button type="button" id="btnNetToGross" onclick="setCalcMode('net')" class="py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-800">
+                                    <i class="fa-solid fa-arrow-up-long"></i> NET &rarr; GROSS
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Salary Input -->
+                        <div>
+                            <label id="salaryLabel" for="salaryInput" class="block text-xs font-semibold text-slate-700 mb-1.5">Tổng Lương Gộp (Gross) / Tháng</label>
+                            <div class="relative rounded-xl shadow-sm">
+                                <input type="text" id="salaryInput" oninput="formatAndCalculate()" class="w-full pl-4 pr-16 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 focus:bg-white transition-all text-lg font-bold text-slate-800" placeholder="0">
+                                <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                                    <span class="text-slate-400 font-semibold text-xs">VNĐ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dependents Count -->
+                        <div>
+                            <label for="dependents" class="block text-xs font-semibold text-slate-700 mb-1.5 flex justify-between">
+                                <span>Số người phụ thuộc</span>
+                                <span id="dependentSubtext" class="text-[11px] text-slate-400 font-normal">(Giảm trừ: 6.2 triệu / người / tháng)</span>
+                            </label>
+                            <div class="flex items-center space-x-2">
+                                <button type="button" onclick="adjustDependents(-1)" class="w-10 h-10 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg flex items-center justify-center font-bold text-base transition-all">&minus;</button>
+                                <input type="number" id="dependents" oninput="calculateTax()" class="w-full text-center py-2 border border-slate-200 rounded-lg font-bold text-slate-800 text-base" value="0" min="0">
+                                <button type="button" onclick="adjustDependents(1)" class="w-10 h-10 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 rounded-lg flex items-center justify-center font-bold text-base transition-all">&plus;</button>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Configurations Toggle -->
+                        <div class="pt-1">
+                            <button type="button" onclick="toggleAdvanced()" class="w-full py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-xs font-bold text-slate-600 flex items-center justify-center gap-2 transition-colors">
+                                <span id="advancedToggleText"><i class="fa-solid fa-gear"></i> Bảo Hiểm & Lương Cơ Sở</span>
+                                <i id="advancedToggleIcon" class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                        </div>
+
+                        <!-- Advanced Section Content -->
+                        <div id="advancedSection" class="hidden space-y-4 p-4 bg-slate-50 rounded-xl border border-slate-200/50">
+                            <!-- Insurance Salary -->
+                            <div>
+                                <label id="insSalaryLabel" class="block text-xs font-semibold text-slate-600 mb-1.5">Mức đóng bảo hiểm tính theo tháng</label>
+                                <div class="grid grid-cols-2 gap-2 mb-2">
+                                    <label class="flex items-center p-2 bg-white border border-slate-200 rounded-lg cursor-pointer text-[11px] font-medium text-slate-700">
+                                        <input type="radio" name="insType" value="full" checked onclick="toggleInsCustom(false)" class="mr-1.5 text-emerald-600 focus:ring-emerald-500">
+                                        Đóng theo thu nhập
+                                    </label>
+                                    <label class="flex items-center p-2 bg-white border border-slate-200 rounded-lg cursor-pointer text-[11px] font-medium text-slate-700">
+                                        <input type="radio" name="insType" value="custom" onclick="toggleInsCustom(true)" class="mr-1.5 text-emerald-600 focus:ring-emerald-500">
+                                        Lương đóng định mức
+                                    </label>
+                                </div>
+                                <div id="customInsDiv" class="hidden">
+                                    <div class="relative rounded-lg shadow-sm">
+                                        <input type="text" id="customInsInput" oninput="formatAndCalculate()" class="w-full pl-3 pr-12 py-2 text-xs bg-white border border-slate-200 rounded-lg focus:ring-emerald-500 focus:border-emerald-500" placeholder="0">
+                                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                            <span class="text-slate-400 text-[10px]">VNĐ</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-[10px] text-slate-400 block mt-1">Lưu ý: Nhập mức lương cơ sở đóng BH theo tháng tương ứng.</span>
+                                </div>
+                            </div>
+
+                            <!-- Regional Minimum Wage -->
+                            <div>
+                                <label for="region" class="block text-xs font-semibold text-slate-600 mb-1.5 flex justify-between">
+                                    <span>Vùng tối thiểu (Trần BHTN)</span>
+                                    <span class="text-[9px] text-emerald-600 font-bold bg-emerald-100 px-1.5 py-0.5 rounded">Tăng 7.2% năm 2026</span>
+                                </label>
+                                <select id="region" onchange="calculateTax()" class="w-full p-2 text-xs bg-white border border-slate-200 rounded-lg focus:ring-emerald-500 focus:border-emerald-500">
+                                    <option value="I">Vùng I (5.310.000đ/tháng)</option>
+                                    <option value="II">Vùng II (4.730.000đ/tháng)</option>
+                                    <option value="III">Vùng III (4.140.000đ/tháng)</option>
+                                    <option value="IV">Vùng IV (3.700.000đ/tháng)</option>
+                                </select>
+                            </div>
+
+                            <!-- Base Salary Selection -->
+                            <div>
+                                <label for="baseSalary" class="block text-xs font-semibold text-slate-600 mb-1.5 flex justify-between">
+                                    <span>Lương cơ sở (Trần BHXH, BHYT)</span>
+                                </label>
+                                <select id="baseSalary" onchange="calculateTax()" class="w-full p-2 text-xs bg-white border border-slate-200 rounded-lg focus:ring-emerald-500 focus:border-emerald-500">
+                                    <option value="2340000">2.340.000 đ (Đầu năm 2026)</option>
+                                    <option value="2530000">2.530.000 đ (Từ 01/07/2026)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Info Cards / FAQs -->
+                <div class="bg-white rounded-2xl shadow-md border border-slate-100 p-5 space-y-4">
+                    <h4 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-circle-info text-emerald-600"></i> Nguyên tắc quyết toán theo Quý/Năm
+                    </h4>
+                    <ul class="space-y-2.5 text-xs text-slate-600 leading-relaxed">
+                        <li class="flex items-start gap-2">
+                            <span class="bg-indigo-100 text-indigo-700 font-bold px-1.5 py-0.5 rounded text-[8px] mt-0.5">QUÝ</span>
+                            <span><b>Tính thuế Quý:</b> Bằng tổng thu nhập chịu thuế của 3 tháng trừ đi các khoản đóng bảo hiểm và tổng giảm trừ gia cảnh của 3 tháng (Bản thân: <b>46.5 triệu</b>, Người phụ thuộc: <b>18.6 triệu / người</b>).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="bg-teal-100 text-teal-700 font-bold px-1.5 py-0.5 rounded text-[8px] mt-0.5">NĂM</span>
+                            <span><b>Tính thuế Năm (Quyết toán):</b> Áp dụng tổng thu nhập cả năm trừ đi bảo hiểm thực nộp cả năm và giảm trừ 12 tháng (Bản thân: <b>186 triệu</b>, Người phụ thuộc: <b>74.4 triệu / người</b>).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Results & Comparisons (7 cols on desktop) -->
+            <div id="resultsWrapper" class="lg:col-span-7 space-y-6">
+                
+                <!-- Zero input placeholder -->
+                <div id="noCalculationState" class="bg-white rounded-2xl shadow-xl border border-dashed border-slate-200 p-12 text-center no-print">
+                    <div class="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-4 text-emerald-600">
+                        <i class="fa-solid fa-receipt text-3xl"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Sẵn Sàng Tính Toán Thuế</h3>
+                    <p class="text-slate-500 max-w-sm mx-auto text-xs">
+                        Nhập mức thu nhập của bạn bên trái và chọn chu kỳ để phân tích dòng tiền thực tế sau thuế chuẩn xác nhất.
+                    </p>
+                </div>
+
+                <!-- Main Calculation Results Card -->
+                <div id="calculationResults" class="hidden bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden print-card">
+                    <!-- Results Card Header -->
+                    <div class="bg-gradient-to-r from-emerald-800 to-green-700 text-white px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <h3 class="font-extrabold text-lg tracking-tight flex items-center gap-2">
+                                <i class="fa-solid fa-file-invoice-dollar"></i> KẾT QUẢ TÍNH THUẾ <span id="resPeriodBadge" class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">THEO THÁNG</span>
+                            </h3>
+                            <p class="text-[11px] text-emerald-100 mt-1">Kỳ quyết toán & tính toán chi tiết năm tài chính 2026</p>
+                        </div>
+                        <div class="flex items-center gap-2 no-print">
+                            <button onclick="window.print()" class="bg-emerald-900/40 hover:bg-emerald-900/60 border border-emerald-500/30 text-emerald-100 hover:text-white px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5">
+                                <i class="fa-solid fa-print"></i> In kết quả
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Large Summary Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-b border-slate-100 bg-slate-50/50">
+                        <div class="p-5 border-b md:border-b-0 md:border-r border-slate-100 text-center md:text-left">
+                            <span id="labelSummaryGross" class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">Tổng Thu Nhập (Gross) / Tháng</span>
+                            <span id="resGross" class="text-xl font-extrabold text-slate-800">0</span>
+                            <span class="text-[10px] text-slate-400 block mt-1">VNĐ</span>
+                        </div>
+                        <div class="p-5 border-b md:border-b-0 md:border-r border-slate-100 text-center md:text-left bg-emerald-50/20">
+                            <span id="labelSummaryNet" class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider block mb-1">Thực Nhận (Net) / Tháng</span>
+                            <span id="resNet" class="text-xl font-black text-emerald-600">0</span>
+                            <span class="text-[10px] text-slate-400 block mt-1">VNĐ</span>
+                        </div>
+                        <div class="p-5 text-center md:text-left">
+                            <span id="labelSummaryTax" class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block mb-1">Thuế TNCN Phải Nộp / Tháng</span>
+                            <span id="resTax" class="text-xl font-extrabold text-rose-600">0</span>
+                            <span class="text-[10px] text-slate-400 block mt-1">VNĐ</span>
+                        </div>
+                    </div>
+
+                    <!-- Breakdown Detail Bars -->
+                    <div class="p-6 space-y-5">
+                        <h4 class="font-bold text-xs uppercase text-slate-400 tracking-wider">Tỷ trọng thu nhập trong chu kỳ</h4>
+                        <div class="space-y-3">
+                            <!-- Visual Progress Bar -->
+                            <div class="h-3.5 w-full bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                                <div id="barNet" class="bg-emerald-500 transition-all duration-500" style="width: 70%"></div>
+                                <div id="barInsurance" class="bg-amber-400 transition-all duration-500" style="width: 15.5%"></div>
+                                <div id="barTax" class="bg-rose-500 transition-all duration-500" style="width: 14.5%"></div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-1 text-[11px] text-center">
+                                <span class="flex items-center justify-center gap-1 font-semibold text-emerald-700">
+                                    <span class="w-2.5 h-2.5 bg-emerald-500 rounded-sm inline-block"></span> NET (<span id="pctNet">0%</span>)
+                                </span>
+                                <span class="flex items-center justify-center gap-1 font-semibold text-amber-700">
+                                    <span class="w-2.5 h-2.5 bg-amber-400 rounded-sm inline-block"></span> Bảo Hiểm (<span id="pctIns">0%</span>)
+                                </span>
+                                <span class="flex items-center justify-center gap-1 font-semibold text-rose-700">
+                                    <span class="w-2.5 h-2.5 bg-rose-500 rounded-sm inline-block"></span> Thuế (<span id="pctTax">0%</span>)
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Comparison With 2025 Block -->
+                        <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-4 border border-emerald-100 space-y-2 no-print">
+                            <div class="flex items-center justify-between">
+                                <h5 class="font-bold text-xs text-emerald-900 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-gift text-emerald-600 text-sm"></i> So Sánh Với Luật Thuế 2025 Cũ
+                                </h5>
+                                <span class="bg-emerald-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">Tiết kiệm!</span>
+                            </div>
+                            <p id="compareSubtext" class="text-[11px] text-slate-600">Với mức giảm trừ bản thân tăng lên 15.5 triệu cùng biểu thuế mới, gánh nặng thuế của bạn giảm như sau:</p>
+                            <div class="grid grid-cols-2 gap-3 pt-1">
+                                <div class="p-2.5 bg-white/80 rounded-lg border border-slate-100">
+                                    <span id="labelCompareOld" class="text-[9px] font-semibold text-slate-500 block uppercase">THUẾ CŨ 2025</span>
+                                    <span id="taxOld2025" class="text-sm font-bold text-slate-500">0 VNĐ</span>
+                                </div>
+                                <div class="p-2.5 bg-white/80 rounded-lg border border-emerald-100">
+                                    <span id="labelCompareSave" class="text-[9px] font-semibold text-emerald-700 block uppercase">SỐ TIỀN TIẾT KIỆM</span>
+                                    <span id="taxSaved" class="text-sm font-extrabold text-emerald-600">0 VNĐ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detailed Table -->
+                        <div class="border border-slate-100 rounded-xl overflow-hidden mt-4">
+                            <table class="min-w-full divide-y divide-slate-100">
+                                <thead class="bg-slate-50">
+                                    <tr>
+                                        <th scope="col" class="px-3 py-2 text-left text-[10px] font-bold text-slate-500 uppercase tracking-wider">Mục Chỉ Tiêu</th>
+                                        <th scope="col" class="px-3 py-2 text-right text-[10px] font-bold text-slate-500 uppercase tracking-wider">Cách Tính</th>
+                                        <th scope="col" class="px-3 py-2 text-right text-[10px] font-bold text-slate-500 uppercase tracking-wider">Thành Tiền (VNĐ)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-slate-100 text-xs">
+                                    <tr>
+                                        <td id="tblRowGrossLabel" class="px-3 py-2.5 font-medium text-slate-800">1. Lương Gộp (Gross) trong kỳ</td>
+                                        <td class="px-3 py-2.5 text-right text-[10px] text-slate-400 italic">Tổng thu nhập chưa trừ thuế, bảo hiểm</td>
+                                        <td id="tblGross" class="px-3 py-2.5 text-right font-semibold text-slate-800">0</td>
+                                    </tr>
+                                    <tr class="bg-slate-50/40">
+                                        <td class="px-3 py-2.5 font-medium text-slate-800">2. Các Khoản Bảo Hiểm Bắt Buộc</td>
+                                        <td class="px-3 py-2.5 text-right text-[10px] text-slate-500">BHXH (8%) + BHYT (1.5%) + BHTN (1%)</td>
+                                        <td id="tblTotalIns" class="px-3 py-2.5 text-right font-semibold text-amber-600">0</td>
+                                    </tr>
+                                    <tr class="text-[11px] bg-amber-50/10">
+                                        <td class="px-5 py-1.5 text-slate-500">&bull; Bảo hiểm xã hội (BHXH)</td>
+                                        <td id="bhxhNote" class="px-3 py-1.5 text-right text-slate-400">8%</td>
+                                        <td id="tblBHXH" class="px-3 py-1.5 text-right text-slate-600">0</td>
+                                    </tr>
+                                    <tr class="text-[11px] bg-amber-50/10">
+                                        <td class="px-5 py-1.5 text-slate-500">&bull; Bảo hiểm y tế (BHYT)</td>
+                                        <td id="bhytNote" class="px-3 py-1.5 text-right text-slate-400">1.5%</td>
+                                        <td id="tblBHYT" class="px-3 py-1.5 text-right text-slate-600">0</td>
+                                    </tr>
+                                    <tr class="text-[11px] bg-amber-50/10">
+                                        <td class="px-5 py-1.5 text-slate-500">&bull; Bảo hiểm thất nghiệp (BHTN)</td>
+                                        <td id="bhtnNote" class="px-3 py-1.5 text-right text-slate-400">1%</td>
+                                        <td id="tblBHTN" class="px-3 py-1.5 text-right text-slate-600">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-2.5 font-medium text-slate-800">3. Thu Nhập Chịu Thuế</td>
+                                        <td class="px-3 py-2.5 text-right text-[10px] text-slate-500">Mục (1) &minus; Mục (2)</td>
+                                        <td id="tblTaxableIncome" class="px-3 py-2.5 text-right font-semibold text-slate-800">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-2.5 font-medium text-slate-800">4. Giảm Trừ Gia Cảnh</td>
+                                        <td class="px-3 py-2.5 text-right text-[10px] text-slate-500">Bản thân + Người phụ thuộc</td>
+                                        <td id="tblTotalDeductions" class="px-3 py-2.5 text-right font-semibold text-emerald-600">0</td>
+                                    </tr>
+                                    <tr class="text-[11px] bg-emerald-50/10">
+                                        <td class="px-5 py-1.5 text-slate-500">&bull; Giảm trừ bản thân</td>
+                                        <td id="tblSelfDeductNote" class="px-3 py-1.5 text-right text-slate-400">15,500,000 / tháng</td>
+                                        <td id="tblSelfDeductVal" class="px-3 py-1.5 text-right text-slate-600">0</td>
+                                    </tr>
+                                    <tr class="text-[11px] bg-emerald-50/10">
+                                        <td class="px-5 py-1.5 text-slate-500">&bull; Giảm trừ người phụ thuộc</td>
+                                        <td id="tblDepNote" class="px-3 py-1.5 text-right text-slate-400">0 người x 6,200,000 / tháng</td>
+                                        <td id="tblDepVal" class="px-3 py-1.5 text-right text-slate-600">0</td>
+                                    </tr>
+                                    <tr class="bg-slate-50/50">
+                                        <td class="px-3 py-2.5 font-bold text-slate-800">5. Thu Nhập Tính Thuế (TNTT)</td>
+                                        <td class="px-3 py-2.5 text-right text-[10px] text-slate-500 font-medium">Mục (3) &minus; Mục (4) (Tối thiểu bằng 0)</td>
+                                        <td id="tblAssessableIncome" class="px-3 py-2.5 text-right font-extrabold text-indigo-700">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-3 py-2.5 font-bold text-slate-800">6. Thuế TNCN Phải Nộp</td>
+                                        <td class="px-3 py-2.5 text-right text-[10px] text-slate-500 font-medium">Biểu lũy tiến từng phần năm 2026</td>
+                                        <td id="tblFinalTax" class="px-3 py-2.5 text-right font-extrabold text-rose-600">0</td>
+                                    </tr>
+                                    <tr class="bg-emerald-50/30">
+                                        <td id="tblRowNetLabel" class="px-3 py-2.5 font-black text-emerald-800">7. Thực Nhận (NET) trong kỳ</td>
+                                        <td class="px-3 py-2.5 text-right text-[10px] text-emerald-600 font-bold">Mục (1) &minus; Mục (2) &minus; Mục (6)</td>
+                                        <td id="tblFinalNet" class="px-3 py-2.5 text-right font-black text-emerald-600">0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Progressive Brackets Breakdown Detail -->
+                        <div class="space-y-3">
+                            <h4 class="font-bold text-slate-800 text-xs flex items-center gap-2">
+                                <i class="fa-solid fa-layer-group text-slate-400"></i> Bảng kê chi tiết theo các bậc lũy tiến đã quy đổi tương ứng
+                            </h4>
+                            <div class="border border-slate-100 rounded-lg overflow-hidden text-[11px]">
+                                <div class="grid grid-cols-4 bg-slate-100 font-bold py-2 px-3 text-slate-600">
+                                    <div>Bậc Thuế</div>
+                                    <div>Phần TNTT (VND)</div>
+                                    <div class="text-center">Thuế Suất</div>
+                                    <div class="text-right">Tiền Thuế Bậc (VNĐ)</div>
+                                </div>
+                                <div id="bracketRows" class="divide-y divide-slate-100">
+                                    <!-- Dynamic Rows -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Detailed Info Section about PIT 2026 -->
+    <section class="bg-white border-t border-slate-200 py-12 px-4 mt-12 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-xl font-extrabold text-slate-900 text-center mb-8">Phương pháp quy đổi biểu thuế TNCN 2026 cho từng chu kỳ</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs text-slate-600">
+                
+                <!-- Month Card -->
+                <div class="p-5 bg-slate-50 rounded-xl border border-slate-100 space-y-2.5">
+                    <span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded text-[9px] uppercase">Chu kỳ tháng</span>
+                    <h4 class="font-bold text-slate-800 text-sm">Biểu tính thuế tiêu chuẩn</h4>
+                    <p class="leading-relaxed">Giảm trừ bản thân 15.5 triệu/tháng, người phụ thuộc 6.2 triệu/tháng. Các bậc thu nhập tính thuế gồm:</p>
+                    <ul class="space-y-1 font-medium text-slate-500">
+                        <li>• Bậc 1: Đến 10 triệu (Thuế suất 5%)</li>
+                        <li>• Bậc 2: 10 triệu - 30 triệu (Thuế suất 10%)</li>
+                        <li>• Bậc 3: 30 triệu - 60 triệu (Thuế suất 20%)</li>
+                        <li>• Bậc 4: 60 triệu - 100 triệu (Thuế suất 30%)</li>
+                        <li>• Bậc 5: Trên 100 triệu (Thuế suất 35%)</li>
+                    </ul>
+                </div>
+
+                <!-- Quarter Card -->
+                <div class="p-5 bg-slate-50 rounded-xl border border-slate-100 space-y-2.5">
+                    <span class="bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded text-[9px] uppercase">Chu kỳ Quý (x3 lần)</span>
+                    <h4 class="font-bold text-slate-800 text-sm">Biểu tính thuế theo Quý</h4>
+                    <p class="leading-relaxed">Giảm trừ bản thân 46.5 triệu/Quý, người phụ thuộc 18.6 triệu/Quý. Các bậc lũy tiến tính theo:</p>
+                    <ul class="space-y-1 font-medium text-slate-500">
+                        <li>• Bậc 1: Đến 30 triệu (Thuế suất 5%)</li>
+                        <li>• Bậc 2: 30 triệu - 90 triệu (Thuế suất 10%)</li>
+                        <li>• Bậc 3: 90 triệu - 180 triệu (Thuế suất 20%)</li>
+                        <li>• Bậc 4: 180 triệu - 300 triệu (Thuế suất 30%)</li>
+                        <li>• Bậc 5: Trên 300 triệu (Thuế suất 35%)</li>
+                    </ul>
+                </div>
+
+                <!-- Year Card -->
+                <div class="p-5 bg-slate-50 rounded-xl border border-slate-100 space-y-2.5">
+                    <span class="bg-teal-100 text-teal-800 font-bold px-2 py-0.5 rounded text-[9px] uppercase">Chu kỳ Năm (x12 lần)</span>
+                    <h4 class="font-bold text-slate-800 text-sm">Biểu quyết toán năm</h4>
+                    <p class="leading-relaxed">Giảm trừ bản thân 186 triệu/năm, người phụ thuộc 74.4 triệu/năm. Thích hợp quyết toán thuế cuối năm tài chính:</p>
+                    <ul class="space-y-1 font-medium text-slate-500">
+                        <li>• Bậc 1: Đến 120 triệu (Thuế suất 5%)</li>
+                        <li>• Bậc 2: 120 triệu - 360 triệu (Thuế suất 10%)</li>
+                        <li>• Bậc 3: 360 triệu - 720 triệu (Thuế suất 20%)</li>
+                        <li>• Bậc 4: 720 triệu - 1.2 Tỷ (Thuế suất 30%)</li>
+                        <li>• Bậc 5: Trên 1.2 Tỷ (Thuế suất 35%)</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple, Elegant Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 px-4 border-t border-slate-800 text-center text-xs mt-auto">
+        <div class="max-w-7xl mx-auto space-y-2">
+            <p class="font-bold text-slate-300">Công cụ tính thuế Thu Nhập Cá Nhân (PIT) năm 2026</p>
+            <p class="font-bold text-slate-300">@Hinhhai HitaxOnline 2026.3 PIT(TNCN). All rights reserved.</p>
+            <p>Phiên bản cập nhật mới nhất theo Nghị quyết 110/2025/UBTVQH15 & Nghị định 293/2025/NĐ-CP.</p>
+        </div>
+    </footer>
+
+    <!-- Core Interactive Script -->
+    <script>
+        // App State
+        let calcMode = 'gross'; // 'gross' or 'net'
+        let periodMode = 'month'; // 'month', 'quarter', 'year'
+        
+        // Base monthly values for 2026
+        const DEDUCTION_SELF_MONTHLY_2026 = 15500000;
+        const DEDUCTION_DEP_MONTHLY_2026 = 6200000;
+        
+        // Base monthly values for 2025
+        const DEDUCTION_SELF_MONTHLY_2025 = 11000000;
+        const DEDUCTION_DEP_MONTHLY_2025 = 4400000;
+
+        // Base 5 brackets for 2026 (Monthly basis)
+        const BASE_BRACKETS_2026 = [
+            { min: 0, max: 10000000, rate: 0.05 },
+            { min: 10000000, max: 30000000, rate: 0.10 },
+            { min: 30000000, max: 60000000, rate: 0.20 },
+            { min: 60000000, max: 100000000, rate: 0.30 },
+            { min: 100000000, max: Infinity, rate: 0.35 }
+        ];
+
+        // Base 7 brackets for 2025 (Monthly basis)
+        const BASE_BRACKETS_2025 = [
+            { min: 0, max: 5000000, rate: 0.05 },
+            { min: 5000000, max: 10000000, rate: 0.10 },
+            { min: 10000000, max: 18000000, rate: 0.15 },
+            { min: 18000000, max: 32000000, rate: 0.20 },
+            { min: 32000000, max: 52000000, rate: 0.25 },
+            { min: 52000000, max: 80000000, rate: 0.30 },
+            { min: 80000000, max: Infinity, rate: 0.35 }
+        ];
+
+        // Regional Minimum Wages 2026
+        const REGION_MIN_WAGE_2026 = {
+            'I': 5310000,
+            'II': 4730000,
+            'III': 4140000,
+            'IV': 3700000
+        };
+
+        // Regional Minimum Wages 2025
+        const REGION_MIN_WAGE_2025 = {
+            'I': 4960000,
+            'II': 4410000,
+            'III': 3860000,
+            'IV': 3450000
+        };
+
+        // Get multiplier based on active period
+        function getMultiplier() {
+            if (periodMode === 'quarter') return 3;
+            if (periodMode === 'year') return 12;
+            return 1; // month
+        }
+
+        // Get human-readable unit
+        function getPeriodUnitText() {
+            if (periodMode === 'quarter') return 'Quý';
+            if (periodMode === 'year') return 'Năm';
+            return 'Tháng';
+        }
+
+        // Parse formatted currency string to number
+        function parseCurrency(str) {
+            return parseFloat(str.replace(/[^0-9]/g, '')) || 0;
+        }
+
+        // Format number to VND string
+        function formatVND(num) {
+            return new Intl.NumberFormat('vi-VN').format(Math.round(num));
+        }
+
+        // Adjust dependents input count helper
+        function adjustDependents(amount) {
+            const input = document.getElementById('dependents');
+            let val = parseInt(input.value) || 0;
+            val = Math.max(0, val + amount);
+            input.value = val;
+            calculateTax();
+        }
+
+        // Toggle advance settings panel
+        function toggleAdvanced() {
+            const section = document.getElementById('advancedSection');
+            const toggleIcon = document.getElementById('advancedToggleIcon');
+            if (section.classList.contains('hidden')) {
+                section.classList.remove('hidden');
+                toggleIcon.style.transform = 'rotate(180deg)';
+            } else {
+                section.classList.add('hidden');
+                toggleIcon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Toggle custom insurance input field
+        function toggleInsCustom(show) {
+            const div = document.getElementById('customInsDiv');
+            if (show) {
+                div.classList.remove('hidden');
+                document.getElementById('customInsInput').value = '';
+            } else {
+                div.classList.add('hidden');
+            }
+            formatAndCalculate();
+        }
+
+        // Set calculation period mode (month, quarter, year)
+        function setPeriodMode(mode) {
+            periodMode = mode;
+            
+            // Adjust active tab classes
+            const tabs = {
+                'month': document.getElementById('tabMonth'),
+                'quarter': document.getElementById('tabQuarter'),
+                'year': document.getElementById('tabYear')
+            };
+
+            Object.keys(tabs).forEach(k => {
+                if (k === mode) {
+                    tabs[k].className = "py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 bg-white text-emerald-800 shadow-sm";
+                } else {
+                    tabs[k].className = "py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-800";
+                }
+            });
+
+            // Update UI Labels based on period mode
+            const unitText = getPeriodUnitText();
+            document.getElementById('salaryLabel').innerHTML = `Tổng Lương Gộp (Gross) / ${unitText}`;
+            document.getElementById('dependentSubtext').innerHTML = `(Giảm trừ: 6.2 triệu / người / tháng)`;
+            document.getElementById('insSalaryLabel').innerHTML = `Mức đóng bảo hiểm tính theo tháng (tự động nhân ${getMultiplier()} cho cả kỳ)`;
+
+            // Recalculate if there is input
+            formatAndCalculate();
+        }
+
+        // Set Calculation Mode (Gross <-> Net)
+        function setCalcMode(mode) {
+            calcMode = mode;
+            const btnGross = document.getElementById('btnGrossToNet');
+            const btnNet = document.getElementById('btnNetToGross');
+            const salaryLabel = document.getElementById('salaryLabel');
+            const input = document.getElementById('salaryInput');
+            const unitText = getPeriodUnitText();
+
+            if (mode === 'gross') {
+                btnGross.className = "py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 bg-white text-emerald-800 shadow-sm";
+                btnNet.className = "py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-800";
+                salaryLabel.innerHTML = `Tổng Lương Gộp (Gross) / ${unitText}`;
+                input.placeholder = `Nhập thu nhập Gross`;
+            } else {
+                btnNet.className = "py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 bg-white text-emerald-800 shadow-sm";
+                btnGross.className = "py-2 px-3 text-xs font-bold rounded-lg transition-all focus:outline-none flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-800";
+                salaryLabel.innerHTML = `Tổng Lương Thực Nhận (Net) / ${unitText}`;
+                input.placeholder = `Nhập thu nhập Net`;
+            }
+            formatAndCalculate();
+        }
+
+        // Reset form to defaults
+        function resetForm() {
+            document.getElementById('salaryInput').value = '';
+            document.getElementById('customInsInput').value = '';
+            document.getElementById('dependents').value = '0';
+            document.getElementById('region').value = 'I';
+            document.getElementById('baseSalary').value = '2340000';
+            document.getElementsByName('insType')[0].checked = true;
+            document.getElementById('customInsDiv').classList.add('hidden');
+            
+            // Set back to monthly calculation by default
+            setPeriodMode('month');
+            setCalcMode('gross');
+            
+            // Hide outputs
+            document.getElementById('noCalculationState').classList.remove('hidden');
+            document.getElementById('calculationResults').classList.add('hidden');
+        }
+
+        // Primary triggering handler for keystrokes
+        function formatAndCalculate() {
+            const input = document.getElementById('salaryInput');
+            let rawValue = parseCurrency(input.value);
+            if (rawValue > 0) {
+                input.value = formatVND(rawValue);
+            } else {
+                input.value = '';
+            }
+
+            const insInput = document.getElementById('customInsInput');
+            let customInsVal = parseCurrency(insInput.value);
+            if (customInsVal > 0) {
+                insInput.value = formatVND(customInsVal);
+            } else if (insInput.value !== '') {
+                insInput.value = '';
+            }
+
+            calculateTax();
+        }
+
+        // Calculate insurance based on wage (Calculates monthly then scales up)
+        function getInsuranceForPeriod(salaryBasisPeriod, regionWage, baseSalary, mult) {
+            // Because insurance has monthly caps, we divide total period salary to find the monthly average,
+            // calculate the capped monthly insurance, then multiply by the period multiplier.
+            const monthlySalary = salaryBasisPeriod / mult;
+
+            // BHXH (8%), BHYT (1.5%) -> ceiling is 20 times base salary
+            const maxBH_YT = 20 * baseSalary;
+            const bh_yt_basis = Math.min(monthlySalary, maxBH_YT);
+            
+            const monthlyBhxh = bh_yt_basis * 0.08;
+            const monthlyBhyt = bh_yt_basis * 0.015;
+
+            // BHTN (1%) -> ceiling is 20 times regional minimum wage
+            const maxBHTN = 20 * regionWage;
+            const bhtn_basis = Math.min(monthlySalary, maxBHTN);
+            const monthlyBhtn = bhtn_basis * 0.01;
+
+            return {
+                bhxh: monthlyBhxh * mult,
+                bhyt: monthlyBhyt * mult,
+                bhtn: monthlyBhtn * mult,
+                total: (monthlyBhxh + monthlyBhyt + monthlyBhtn) * mult,
+                monthlyBhxh,
+                monthlyBhyt,
+                monthlyBhtn,
+                monthlyTotal: monthlyBhxh + monthlyBhyt + monthlyBhtn
+            };
+        }
+
+        // Calculate progressive tax based on scaled brackets
+        function calculateProgressiveTax(assessableIncome, baseBrackets, mult) {
+            let tax = 0;
+            const breakdowns = [];
+            
+            // Scale brackets boundaries for the period
+            const scaledBrackets = baseBrackets.map(b => ({
+                min: b.min * mult,
+                max: b.max === Infinity ? Infinity : b.max * mult,
+                rate: b.rate
+            }));
+
+            if (assessableIncome <= 0) {
+                return { totalTax: 0, breakdowns: scaledBrackets.map((b, idx) => ({ ...b, bracket: idx + 1, taxableAmount: 0, taxAmount: 0 })) };
+            }
+
+            for (let i = 0; i < scaledBrackets.length; i++) {
+                const b = scaledBrackets[i];
+                let amountInBracket = 0;
+                
+                if (assessableIncome > b.min) {
+                    amountInBracket = Math.min(assessableIncome - b.min, b.max - b.min);
+                }
+
+                const taxAmount = amountInBracket * b.rate;
+                tax += taxAmount;
+                
+                breakdowns.push({
+                    bracket: i + 1,
+                    min: b.min,
+                    max: b.max,
+                    rate: b.rate,
+                    taxableAmount: amountInBracket,
+                    taxAmount: taxAmount
+                });
+            }
+
+            return { totalTax: tax, breakdowns };
+        }
+
+        // 2025 Calculator logic scaled for the period
+        function calculate2025TaxForPeriod(grossPeriod, dependentsCount, regionWage2025, mult) {
+            const baseSalary2025 = 2340000;
+            const ins = getInsuranceForPeriod(grossPeriod, regionWage2025, baseSalary2025, mult);
+            const taxableIncome = Math.max(0, grossPeriod - ins.total);
+            const totalDeductions = (DEDUCTION_SELF_MONTHLY_2025 * mult) + (dependentsCount * DEDUCTION_DEP_MONTHLY_2025 * mult);
+            const assessableIncome = Math.max(0, taxableIncome - totalDeductions);
+            
+            // Use 7-bracket old calculation scaled by mult
+            const oldScaledBrackets = BASE_BRACKETS_2025.map(b => ({
+                min: b.min * mult,
+                max: b.max === Infinity ? Infinity : b.max * mult,
+                rate: b.rate
+            }));
+
+            let oldTax = 0;
+            for (let b of oldScaledBrackets) {
+                if (assessableIncome > b.min) {
+                    let taxableAmt = Math.min(assessableIncome - b.min, b.max - b.min);
+                    oldTax += taxableAmt * b.rate;
+                }
+            }
+
+            return oldTax;
+        }
+
+        // Core Calculator Controller
+        function calculateTax() {
+            const inputVal = parseCurrency(document.getElementById('salaryInput').value);
+            if (inputVal <= 0) {
+                document.getElementById('noCalculationState').classList.remove('hidden');
+                document.getElementById('calculationResults').classList.add('hidden');
+                return;
+            }
+
+            document.getElementById('noCalculationState').classList.add('hidden');
+            document.getElementById('calculationResults').classList.remove('hidden');
+
+            // Gather inputs
+            const dependentsCount = parseInt(document.getElementById('dependents').value) || 0;
+            const region = document.getElementById('region').value;
+            const baseSalary = parseInt(document.getElementById('baseSalary').value);
+            const regionWage = REGION_MIN_WAGE_2026[region];
+            const isCustomIns = document.getElementsByName('insType')[1].checked;
+            const customInsVal = parseCurrency(document.getElementById('customInsInput').value);
+
+            const mult = getMultiplier();
+            const unitText = getPeriodUnitText();
+
+            // Setup Badge / Label Header for Results
+            document.getElementById('resPeriodBadge').innerText = `THEO ${unitText}`;
+            document.getElementById('labelSummaryGross').innerText = `Tổng Thu Nhập (Gross) / ${unitText}`;
+            document.getElementById('labelSummaryNet').innerText = `Thực Nhận (Net) / ${unitText}`;
+            document.getElementById('labelSummaryTax').innerText = `Thuế TNCN Phải Nộp / ${unitText}`;
+            
+            document.getElementById('tblRowGrossLabel').innerText = `1. Lương Gộp (Gross) / ${unitText}`;
+            document.getElementById('tblRowNetLabel').innerText = `7. Thực Nhận (NET) / ${unitText}`;
+
+            document.getElementById('labelCompareOld').innerText = `THUẾ CŨ 2025 (${unitText})`;
+            document.getElementById('labelCompareSave').innerText = `TIẾT KIỆM (${unitText})`;
+            document.getElementById('compareSubtext').innerText = `Với mức giảm trừ gia cảnh tăng từ 11 triệu lên 15.5 triệu/tháng cùng biểu thuế mới, gánh nặng thuế cả ${unitText} của bạn giảm như sau:`;
+
+            let gross = 0;
+            let net = 0;
+            let insTotal = 0;
+            let insDetail = null;
+            let finalTax = 0;
+            let taxBreakdowns = [];
+
+            if (calcMode === 'gross') {
+                gross = inputVal;
+                // If custom insurance salary is provided, it's considered monthly basis so we multiply it by 'mult'
+                const insSalaryBasis = isCustomIns ? (customInsVal * mult) : gross;
+                insDetail = getInsuranceForPeriod(insSalaryBasis, regionWage, baseSalary, mult);
+                insTotal = insDetail.total;
+
+                const taxableIncome = Math.max(0, gross - insTotal);
+                const totalDeductions = (DEDUCTION_SELF_MONTHLY_2026 * mult) + (dependentsCount * DEDUCTION_DEP_MONTHLY_2026 * mult);
+                const assessableIncome = Math.max(0, taxableIncome - totalDeductions);
+
+                const taxResult = calculateProgressiveTax(assessableIncome, BASE_BRACKETS_2026, mult);
+                finalTax = taxResult.totalTax;
+                taxBreakdowns = taxResult.breakdowns;
+                net = gross - insTotal - finalTax;
+            } else {
+                // Net to Gross: Iterative binary search to find matching Gross
+                net = inputVal;
+                let low = net;
+                let high = net * 3;
+                let mid = 0;
+                let solvedNet = 0;
+                let iterations = 0;
+
+                while (high - low > 0.1 && iterations < 55) {
+                    mid = (low + high) / 2;
+                    const tempInsSalary = isCustomIns ? (customInsVal * mult) : mid;
+                    const tempIns = getInsuranceForPeriod(tempInsSalary, regionWage, baseSalary, mult);
+                    const tempTaxable = Math.max(0, mid - tempIns.total);
+                    const tempDeductions = (DEDUCTION_SELF_MONTHLY_2026 * mult) + (dependentsCount * DEDUCTION_DEP_MONTHLY_2026 * mult);
+                    const tempAssessable = Math.max(0, tempTaxable - tempDeductions);
+                    const tempTaxResult = calculateProgressiveTax(tempAssessable, BASE_BRACKETS_2026, mult);
+                    
+                    solvedNet = mid - tempIns.total - tempTaxResult.totalTax;
+
+                    if (solvedNet < net) {
+                        low = mid;
+                    } else {
+                        high = mid;
+                    }
+                    iterations++;
+                }
+
+                gross = mid;
+                const insSalaryBasis = isCustomIns ? (customInsVal * mult) : gross;
+                insDetail = getInsuranceForPeriod(insSalaryBasis, regionWage, baseSalary, mult);
+                insTotal = insDetail.total;
+                
+                const taxableIncome = Math.max(0, gross - insTotal);
+                const totalDeductions = (DEDUCTION_SELF_MONTHLY_2026 * mult) + (dependentsCount * DEDUCTION_DEP_MONTHLY_2026 * mult);
+                const assessableIncome = Math.max(0, taxableIncome - totalDeductions);
+                
+                const taxResult = calculateProgressiveTax(assessableIncome, BASE_BRACKETS_2026, mult);
+                finalTax = taxResult.totalTax;
+                taxBreakdowns = taxResult.breakdowns;
+            }
+
+            // Calculate 2025 old tax comparison
+            const regionWage2025 = REGION_MIN_WAGE_2025[region];
+            const old2025Tax = calculate2025TaxForPeriod(gross, dependentsCount, regionWage2025, mult);
+            const savedTax = Math.max(0, old2025Tax - finalTax);
+
+            // Render Core Indicators
+            document.getElementById('resGross').innerText = formatVND(gross);
+            document.getElementById('resNet').innerText = formatVND(net);
+            document.getElementById('resTax').innerText = formatVND(finalTax);
+
+            // Render Percentages / Visual breakdown bars
+            const pctNet = ((net / gross) * 100).toFixed(1);
+            const pctIns = ((insTotal / gross) * 100).toFixed(1);
+            const pctTax = ((finalTax / gross) * 100).toFixed(1);
+
+            document.getElementById('pctNet').innerText = `${pctNet}%`;
+            document.getElementById('pctIns').innerText = `${pctIns}%`;
+            document.getElementById('pctTax').innerText = `${pctTax}%`;
+
+            document.getElementById('barNet').style.width = `${pctNet}%`;
+            document.getElementById('barInsurance').style.width = `${pctIns}%`;
+            document.getElementById('barTax').style.width = `${pctTax}%`;
+
+            // Render Compare Block
+            document.getElementById('taxOld2025').innerText = `${formatVND(old2025Tax)} VNĐ`;
+            document.getElementById('taxSaved').innerText = `${formatVND(savedTax)} VNĐ`;
+
+            // Render Detailed Tables
+            document.getElementById('tblGross').innerText = formatVND(gross);
+            document.getElementById('tblTotalIns').innerText = formatVND(insTotal);
+            
+            // Sub-insurance items
+            document.getElementById('tblBHXH').innerText = formatVND(insDetail.bhxh);
+            document.getElementById('tblBHYT').innerText = formatVND(insDetail.bhyt);
+            document.getElementById('tblBHTN').innerText = formatVND(insDetail.bhtn);
+
+            // Set ceiling notes
+            const ceilingBH = 20 * baseSalary;
+            const ceilingUI = 20 * regionWage;
+            document.getElementById('bhxhNote').innerText = `8% (Trần trích đóng: ${formatVND(ceilingBH)}đ / tháng)`;
+            document.getElementById('bhytNote').innerText = `1.5% (Trần trích đóng: ${formatVND(ceilingBH)}đ / tháng)`;
+            document.getElementById('bhtnNote').innerText = `1% (Trần trích đóng: ${formatVND(ceilingUI)}đ / tháng)`;
+
+            // Deductions
+            const taxableIncomeVal = Math.max(0, gross - insTotal);
+            document.getElementById('tblTaxableIncome').innerText = formatVND(taxableIncomeVal);
+            
+            const totalSelfDeductions = DEDUCTION_SELF_MONTHLY_2026 * mult;
+            const totalDepDeductions = dependentsCount * DEDUCTION_DEP_MONTHLY_2026 * mult;
+            
+            document.getElementById('tblSelfDeductNote').innerText = `${formatVND(DEDUCTION_SELF_MONTHLY_2026)}đ x ${mult} tháng`;
+            document.getElementById('tblSelfDeductVal').innerText = formatVND(totalSelfDeductions);
+            
+            document.getElementById('tblDepNote').innerText = `${dependentsCount} người x ${formatVND(DEDUCTION_DEP_MONTHLY_2026)}đ x ${mult} tháng`;
+            document.getElementById('tblDepVal').innerText = formatVND(totalDepDeductions);
+            
+            document.getElementById('tblTotalDeductions').innerText = formatVND(totalSelfDeductions + totalDepDeductions);
+
+            // Assessable income
+            const assessableIncomeVal = Math.max(0, taxableIncomeVal - (totalSelfDeductions + totalDepDeductions));
+            document.getElementById('tblAssessableIncome').innerText = formatVND(assessableIncomeVal);
+
+            // Finals
+            document.getElementById('tblFinalTax').innerText = formatVND(finalTax);
+            document.getElementById('tblFinalNet').innerText = formatVND(net);
+
+            // Populate progressive bracket details
+            const bracketRows = document.getElementById('bracketRows');
+            bracketRows.innerHTML = '';
+            
+            taxBreakdowns.forEach(row => {
+                const labelMax = row.max === Infinity ? "Trở lên" : `đến ${formatVND(row.max)}`;
+                const labelMin = row.min === 0 ? "Đến" : `Trên ${formatVND(row.min)}`;
+                const bracketDesc = `${labelMin} ${row.max === Infinity ? '' : labelMax}`;
+
+                const rowDiv = document.createElement('div');
+                rowDiv.className = `grid grid-cols-4 py-2 px-3 items-center ${row.taxableAmount > 0 ? 'bg-emerald-50/40 text-emerald-900 font-semibold' : 'text-slate-400'}`;
+                rowDiv.innerHTML = `
+                    <div>Bậc ${row.bracket}</div>
+                    <div>${bracketDesc}</div>
+                    <div class="text-center">${row.rate * 100}%</div>
+                    <div class="text-right">${formatVND(row.taxAmount)}</div>
+                `;
+                bracketRows.appendChild(rowDiv);
+            });
+        }
+    </script>
+</body>
+</html>
